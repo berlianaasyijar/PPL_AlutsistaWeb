@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        
+        <meta charset="utf-8" />
+        <title>Daftar | Alutsista FBA Group</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+        <meta content="Themesdesign" name="author" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- Bootstrap Css -->
+        <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+        <!-- Icons Css -->
+        <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+        <!-- App Css-->
+        <link href="assets/css/app.css" id="app-style" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body class="bg-pattern">
+        <div class="bg-overlay"></div>
+        <div class="account-pages my-5 pt-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6 col-lg-6 col-md-8">
+                        <div class="card">
+                            <div class="card-body p-4">
+                                <div class="">
+                                    <div class="text-center">
+                                        <a href="index.html" class="">
+                                            <img src="assets/images/logo.png" alt="" width="70" height="70" class="auth-logo mx-auto">
+                                        </a>
+                                    </div>
+                                    <!-- end row -->
+                                    <h4 class="font-size-18 text-muted mt-2 text-center">Daftar Anggota Baru</h4>
+                                    <p class="mb-5 text-center">Silahkan lengkapi data dibawah ini dengan benar.</p>
+                                    <form class="form-horizontal">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="mb-4">
+                                                    <label class="form-label" for="email">Nama Lengkap</label>
+                                                    <input type="text" class="form-control" id="name" placeholder="Masukan nama lengkap">
+                                                </div>
+                                                <div class="mb-4">
+                                                    <label class="form-label" for="email">Nomor Registrasi Prajurit (NRP)</label>
+                                                    <input type="text" class="form-control" id="nrp" placeholder="Masukan nomor regisrasi prajurit (NRP)">
+                                                </div>
+                                                <div class="row mb-4">
+                                                    <div class="col-md-6">
+                                                        <label class="form-label" for="email">Email</label>
+                                                        <input type="text" class="form-control" id="email" placeholder="Masukan email">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label class="form-label" for="email">No. Telepon</label>
+                                                        <input type="text" class="form-control" id="phone" placeholder="Masukan no. telepon">
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-4">
+                                                    <div class="col-md-6">
+                                                        <label class="form-label" for="email">ID Anggota</label>
+                                                        <input type="text" class="form-control" id="id_member" placeholder="Masukan ID anggota">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label class="form-label" for="email">Kategori TNI</label>
+                                                        <select class="form-select" id="category">
+                                                            <option value="">Pilih Kategori</option>
+                                                            <option value="AL">Angkatan Laut</option>
+                                                            <option value="AD">Angkatan Darat</option>
+                                                            <option value="AU">Angkatan Udara</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-4">
+                                                    <label class="form-label" for="userpassword">Password</label>
+                                                    <input type="password" class="form-control" id="password" placeholder="Masukan password">
+                                                </div>
+                                                <div class="mb-4">
+                                                    <label class="form-label" for="email">Kartu Tanda Anggota</label>
+                                                    <input type="file" class="form-control" />
+                                                </div>
+                                                <div class="d-grid mt-4">
+                                                    <button class="btn btn-dark waves-effect waves-light" type="button" onclick="register()">Daftar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-block mt-3">
+                                            <p class="text-black-50">Sudah punya akun? <a href="auth-login.html" class="fw-medium text-danger" style="font-weight: bold;"> <u>Login</u> </a> </p>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-5 text-center">
+                            <p class="text-white-50">© <script>document.write(new Date().getFullYear())</script> FBA Group.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end row -->
+            </div>
+        </div>
+        <!-- end Account pages -->
+
+        <!-- JAVASCRIPT -->
+        <script src="assets/libs/jquery/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/libs/simplebar/simplebar.min.js"></script>
+
+        <script>
+            function generateId() {
+                return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                    var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
+                    return v.toString(16);
+                });
+            }
+
+            function register() {
+                const listUsers = localStorage.getItem('users') ? JSON.parse(localStorage.getItem('users')) : []
+
+                const data = {
+                    id: generateId(),
+                    name: $('#name').val(),
+                    nrp: $('#nrp').val(),
+                    email: $('#email').val(),
+                    phone: $('#phone').val(),
+                    id_member: $('#id_member').val(),
+                    category: $('#category').val(),
+                    password: $('#password').val(),
+                }
+
+                listUsers.push(data)
+                localStorage.setItem('users', JSON.stringify(listUsers))
+                localStorage.setItem('dataUser', JSON.stringify(data))
+                localStorage.setItem('isLogin', true)
+                setTimeout(() => {
+                    window.location.href="index.html"
+                }, 1000);
+            }
+        </script>
+    </body>
+</html>

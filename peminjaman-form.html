@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        
+        <meta charset="utf-8" />
+        <title>Form Peminjaman | Alutsista FBA Group</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+        <meta content="Themesdesign" name="author" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/logo.png">
+
+        <!-- Sweet Alert-->
+        <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- Bootstrap Css -->
+        <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+        <!-- Icons Css -->
+        <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+        <!-- App Css-->
+        <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body data-topbar="dark" data-layout="horizontal">
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            <header id="page-topbar">
+                <div class="navbar-header">
+                    <div class="d-flex">
+                        <!-- LOGO -->
+                        <div class="navbar-brand-box text-center">
+                            <a href="index.html" class="logo logo-light">
+                                <span class="logo-lg">
+                                    <img src="assets/images/logo.png" alt="logo-light" height="48">
+                                    <span class="ms-3 h5 text-light">Alutsista</span>
+                                </span>
+                                <span class="logo-sm">
+                                    <img src="assets/images/logo.png" alt="logo-light" height="44">
+                                </span>
+                            </a>
+                        </div>
+
+                        <button type="button" class="btn btn-sm px-3 font-size-24 d-lg-none header-item" data-bs-toggle="collapse"
+                            data-bs-target="#topnav-menu-content">
+                            <i class="ri-menu-2-line align-middle"></i>
+                        </button>
+                    </div>
+
+                    <div class="d-flex">
+                        <div class="dropdown d-inline-block">
+                            <button type="button" class="btn header-item noti-icon waves-effect"
+                                id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="ri-notification-3-line"></i>
+                                <span class="noti-dot"></span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                                aria-labelledby="page-header-notifications-dropdown">
+                                <div class="p-3">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            <h6 class="m-0"> Notifications </h6>
+                                        </div>
+                                        <div class="col-auto">
+                                            <a href="#!" class="small"> View All</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-simplebar style="max-height: 230px;">
+                                    <a href="" class="text-reset notification-item">
+                                        <div class="d-flex">
+                                            <div class="flex-shrink-0 me-3">
+                                                <div class="avatar-xs">
+                                                    <span class="avatar-title bg-primary rounded-circle font-size-16">
+                                                        <i class="ri-shopping-cart-line"></i>
+                                                    </span>
+                                                </div>
+                                            </div>                                
+                                            <div class="flex-grow-1">
+                                                <h6 class="mb-1">Your order is placed</h6>
+                                                <div class="font-size-12 text-muted">
+                                                    <p class="mb-1">If several languages coalesce the grammar</p>
+                                                    <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 3 min ago</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- <div class="p-2 border-top">
+                                    <div class="d-grid">
+                                        <a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)">
+                                            <i class="mdi mdi-arrow-right-circle me-1"></i> View More..
+                                        </a>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+
+
+                        <div class="dropdown d-inline-block user-dropdown">
+                            <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img class="rounded-circle header-profile-user" src="assets/images/user.png"
+                                    alt="Header Avatar">
+                                <span class="d-none d-xl-inline-block ms-1" id="account-name">-</span>
+                                <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <!-- item-->
+                                <a class="dropdown-item" href="#"><i class="ri-user-line align-middle me-1"></i> Profile</a>
+                                <div class="dropdown-divider"></div>
+                                <button type="button" class="dropdown-item text-danger" onclick="signout()"><i class="ri-shut-down-line align-middle me-1 text-danger"></i> Logout</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="topnav">
+                <div class="container-fluid">
+                    <nav class="navbar navbar-light navbar-expand-lg topnav-menu">
+
+                        <div class="collapse navbar-collapse" id="topnav-menu-content">
+                            <ul class="navbar-nav">
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html">
+                                        <i class="mdi mdi-home-variant-outline me-2"></i> Dashboard
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="alutsista.html">
+                                        <i class="mdi mdi-clipboard-text-outline me-2"></i> Data Alutsista
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="peminjaman.html">
+                                        <i class="mdi mdi-clipboard-text-outline me-2"></i> Peminjaman
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="pelaporan.html">
+                                        <i class="mdi mdi-clipboard-pulse-outline me-2"></i> Laporan
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="news.html">
+                                        <i class="mdi mdi-newspaper me-2"></i> Informasi
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="tentang.html">
+                                        <i class="mdi mdi-information-outline me-2"></i> Tentang Kami
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+                <div class="page-content">
+                    <div class="container-fluid">
+                        <!-- start page title -->
+                        <div class="row mb-3 justify-content-center">
+                            <div class="col-8">
+                                <div class="page-title-box d-sm-flex align-items-center">
+                                    <a href="peminjaman.html" class="btn btn-secondary me-3"><span class="mdi mdi-arrow-left"></span></a>
+                                    <h4 class="mb-sm-0">Pengajuan Peminjaman</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end page title -->
+                        <div class="row justify-content-center">
+                            <div class="col-md-8">
+                                <div class="card">
+                                    <div class="card-header bg-dark">
+                                        <h4 class="font-size-18 mt-2 text-white">Form Pengajuan Pinjaman Barang</h4>
+                                        <p class="text-white">Silahkan lengkapi data dibawah ini dengan benar.</p>
+                                    </div>
+                                    <div class="card-body p-4">
+                                        <!-- end row -->
+                                        <form class="form-horizontal mb-3">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="row mb-4">
+                                                        <div class="col-md-6">
+                                                            <label class="form-label">Nomor Registrasi Prajurit (NRP)</label>
+                                                            <input type="number" id="nrp" class="form-control" placeholder="Masukan nomor registrasi prajurit (NRP)">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label class="form-label">Nama Peminjam</label>
+                                                            <input type="name" id="name" class="form-control" placeholder="Masukan nama peminjam">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-4">
+                                                        <div class="col-md-6">
+                                                            <label class="form-label" for="email">Kategori Angkatan</label>
+                                                            <select class="form-select" id="category-soldier">
+                                                                <option value="">Pilih Angkatan</option>
+                                                                <option value="AL">Angkatan Laut</option>
+                                                                <option value="AD">Angkatan Darat</option>
+                                                                <option value="AU">Angkatan Udara</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-4">
+                                                        <div class="col-md-6">
+                                                            <label class="form-label" for="email">Kategori Alutsista</label>
+                                                            <select class="form-select" id="category">
+                                                                <option value="">Pilih Kategori Alutsista</option>
+                                                                <option value="pistol">Pistol</option>
+                                                                <option value="tank">Tank</option>
+                                                                <option value="pewawat-tempur">Pesawat Tempur</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label class="form-label" for="email">Jenis / Nomor Seri</label>
+                                                            <select class="form-select" id="type">
+                                                                <option value="">Pilih Kategori</option>
+                                                                <option>Revolver</option>
+                                                                <option>Glock Meyer 22 dan Raging Bull</option>
+                                                                <option>Glock Meyer 22</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-4">
+                                                        <label class="form-label" for="email">Jumlah Peminjaman</label>
+                                                        <input type="number" class="form-control" id="total" placeholder="masukan jumlah peminjaman">
+                                                    </div>
+                                                    <div class="row mb-4">
+                                                        <div class="col-md-6">
+                                                            <label class="form-label">Tanggal Peminjaman</label>
+                                                            <input class="form-control" type="datetime-local" placeholder="tanggal peminjaman" id="date-loan">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label class="form-label">Tanggal Pengembalian</label>
+                                                            <input class="form-control" type="datetime-local" placeholder="tanggal pengembalian" id="date-return">
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-4">
+                                                        <label class="form-label">Tujuan Peminjaman</label>
+                                                        <textarea class="form-control" placeholder="Masukan tujuan peminjaman barang" id="loan-purpose" rows="4"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <div class="alert alert-info d-flex align-items-center"><span class="mdi mdi-information me-2"></span> Konfirmasi peminjaman dilakukan 2X24 Jam</div>
+                                    </div>
+                                    <div class="card-footer border-top bg-white text-white py-3">
+                                        <div class="d-grid">
+                                            <button class="btn btn-dark waves-effect waves-light" type="button" onclick="save()">Ajukan Pinjaman</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Page-content -->
+               
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <script>document.write(new Date().getFullYear())</script> © FBA Group.
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+        <!-- Right bar overlay-->
+        <div class="rightbar-overlay"></div>
+
+        <!-- JAVASCRIPT -->
+        <script src="assets/libs/jquery/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/libs/simplebar/simplebar.min.js"></script>
+
+        <!-- Sweet Alerts js -->
+        <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
+
+        <script>
+            $( document ).ready(function() {
+                if (localStorage.getItem('isLogin')) {
+                    const dataUser = JSON.parse(localStorage.getItem('dataUser'))
+                    $('#account-name').html(dataUser.name)
+                } else {
+                    window.location.href="auth-login.html"
+                }
+            });
+            
+            function generateId() {
+                return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                    var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
+                    return v.toString(16);
+                });
+            }
+
+            function save() {
+                const listLoan = localStorage.getItem('loan') ? JSON.parse(localStorage.getItem('loan')) : []
+                const data = {
+                    id: generateId(),
+                    nrp: document.getElementById('nrp').value,
+                    name: document.getElementById('name').value,
+                    category_soldier: document.getElementById('category-soldier').value,
+                    category: document.getElementById('category').value,
+                    type: document.getElementById('type').value,
+                    total: document.getElementById('total').value,
+                    date_loan: document.getElementById('date-loan').value,
+                    date_return: document.getElementById('date-return').value,
+                    loan_purpose: document.getElementById('loan-purpose').value,
+                    status: 'return'
+                }
+                listLoan.push(data)
+                localStorage.setItem('loan', JSON.stringify(listLoan))
+                
+                Swal.fire(
+                    {
+                        title: 'Sukses!',
+                        text: 'Barang berhasil dipinjam!',
+                        icon: 'success',
+                        showCancelButton: false,
+                        confirmButtonColor: '#5664d2',
+                    }
+                )
+
+                setTimeout(() => {
+                    window.location.href='/peminjaman.html'
+                }, 500);
+            }
+        </script>
+    </body>
+</html>

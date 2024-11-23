@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        
+        <meta charset="utf-8" />
+        <title>Login | Alutsista FBA Group</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+        <meta content="Themesdesign" name="author" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- Bootstrap Css -->
+        <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+        <!-- Icons Css -->
+        <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+        <!-- App Css-->
+        <link href="assets/css/app.css" id="app-style" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body class="bg-pattern">
+        <div class="bg-overlay"></div>
+        <div class="account-pages my-5 pt-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-4 col-lg-6 col-md-8">
+                        <div class="card">
+                            <div class="card-body p-4">
+                                <div class="">
+                                    <div class="text-center">
+                                        <a href="index.html" class="">
+                                            <img src="assets/images/logo.png" alt="" width="70" height="70" class="auth-logo mx-auto">
+                                        </a>
+                                    </div>
+                                    <!-- end row -->
+                                    <h4 class="font-size-18 text-muted mt-2 text-center">Login Anggota</h4>
+                                    <p class="mb-5 text-center">Silahkan masukan NRP dan password kamu</p>
+                                    <form class="form-horizontal">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="mb-4">
+                                                    <label class="form-label" for="email">NRP</label>
+                                                    <input type="text" class="form-control" id="nrp" placeholder="Masukan NRP">
+                                                </div>
+                                                <div class="mb-4">
+                                                    <label class="form-label" for="password">Password</label>
+                                                    <input type="password" class="form-control" id="password" placeholder="Masukan password">
+                                                </div>
+
+                                                <div class="d-block">
+                                                    <div class="text-md-end mt-3 mt-md-0">
+                                                        <a href="auth-recoverpw.html" class="text-muted"><i class="mdi mdi-lock"></i> Lupa password?</a>
+                                                    </div>
+                                                </div>
+                                                <div class="d-grid mt-4">
+                                                    <button class="btn btn-dark waves-effect waves-light" type="button" onclick="login()">Masuk</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-block mt-3">
+                                            <p class="text-black-50">Belum punya akun? <a href="auth-register.html" class="fw-medium text-danger" style="font-weight: bold;"> <u>Daftar</u> </a> </p>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-5 text-center">
+                            <p class="text-white-50">© <script>document.write(new Date().getFullYear())</script> FBA Group.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end row -->
+            </div>
+        </div>
+        <!-- end Account pages -->
+
+        <!-- JAVASCRIPT -->
+        <script src="assets/libs/jquery/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/libs/simplebar/simplebar.min.js"></script>
+
+        <script>
+            $( document ).ready(function() {
+                if (localStorage.getItem('isLogin'))
+                    window.location.href="index.html"
+            });
+
+            function login() {
+                const listUsers = localStorage.getItem('users') ? JSON.parse(localStorage.getItem('users')) : []
+                let isAllow = false
+                let detailUser = null
+
+                listUsers.forEach(element => {
+                    if (element.nrp == $('#nrp').val() && element.password == $('#password').val()) {
+                        isAllow = true
+                        detailUser = element
+                        return
+                    }
+                });
+
+                if (isAllow) {
+                    localStorage.setItem('isLogin', true)
+                    localStorage.setItem('dataUser', JSON.stringify(detailUser))
+                    setTimeout(() => {
+                        window.location.href="index.html"
+                    }, 500);
+                } else {
+                    alert('NRP atau password yang kamu masukan salah !')
+                }
+            }
+        </script>
+    </body>
+</html>

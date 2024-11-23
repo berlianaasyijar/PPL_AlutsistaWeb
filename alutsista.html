@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        
+        <meta charset="utf-8" />
+        <title>Alutsista | Alutsista FBA Group</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+        <meta content="Themesdesign" name="author" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/logo.png">
+
+        <!-- Bootstrap Css -->
+        <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+        <!-- Icons Css -->
+        <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+        <!-- App Css-->
+        <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body data-topbar="dark" data-layout="horizontal">
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            <header id="page-topbar">
+                <div class="navbar-header">
+                    <div class="d-flex">
+                        <!-- LOGO -->
+                        <div class="navbar-brand-box text-center">
+                            <a href="index.html" class="logo logo-light">
+                                <span class="logo-lg">
+                                    <img src="assets/images/logo.png" alt="logo-light" height="48">
+                                    <span class="ms-3 h5 text-light">Alutsista</span>
+                                </span>
+                                <span class="logo-sm">
+                                    <img src="assets/images/logo.png" alt="logo-light" height="44">
+                                </span>
+                            </a>
+                        </div>
+
+                        <button type="button" class="btn btn-sm px-3 font-size-24 d-lg-none header-item" data-bs-toggle="collapse"
+                            data-bs-target="#topnav-menu-content">
+                            <i class="ri-menu-2-line align-middle"></i>
+                        </button>
+                    </div>
+
+                    <div class="d-flex">
+                        <div class="dropdown d-inline-block">
+                            <button type="button" class="btn header-item noti-icon waves-effect"
+                                id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="ri-notification-3-line"></i>
+                                <span class="noti-dot"></span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                                aria-labelledby="page-header-notifications-dropdown">
+                                <div class="p-3">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            <h6 class="m-0"> Notifications </h6>
+                                        </div>
+                                        <div class="col-auto">
+                                            <a href="#!" class="small"> View All</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-simplebar style="max-height: 230px;">
+                                    <a href="" class="text-reset notification-item">
+                                        <div class="d-flex">
+                                            <div class="flex-shrink-0 me-3">
+                                                <div class="avatar-xs">
+                                                    <span class="avatar-title bg-primary rounded-circle font-size-16">
+                                                        <i class="ri-shopping-cart-line"></i>
+                                                    </span>
+                                                </div>
+                                            </div>                                
+                                            <div class="flex-grow-1">
+                                                <h6 class="mb-1">Your order is placed</h6>
+                                                <div class="font-size-12 text-muted">
+                                                    <p class="mb-1">If several languages coalesce the grammar</p>
+                                                    <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 3 min ago</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- <div class="p-2 border-top">
+                                    <div class="d-grid">
+                                        <a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)">
+                                            <i class="mdi mdi-arrow-right-circle me-1"></i> View More..
+                                        </a>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+
+
+                        <div class="dropdown d-inline-block user-dropdown">
+                            <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img class="rounded-circle header-profile-user" src="assets/images/user.png"
+                                    alt="Header Avatar">
+                                <span class="d-none d-xl-inline-block ms-1" id="account-name">-</span>
+                                <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <!-- item-->
+                                <a class="dropdown-item" href="#"><i class="ri-user-line align-middle me-1"></i> Profile</a>
+                                <div class="dropdown-divider"></div>
+                                <button type="button" class="dropdown-item text-danger" onclick="signout()"><i class="ri-shut-down-line align-middle me-1 text-danger"></i> Logout</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="topnav">
+                <div class="container-fluid">
+                    <nav class="navbar navbar-light navbar-expand-lg topnav-menu">
+
+                        <div class="collapse navbar-collapse" id="topnav-menu-content">
+                            <ul class="navbar-nav">
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html">
+                                        <i class="mdi mdi-home-variant-outline me-2"></i> Dashboard
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="alutsista.html">
+                                        <i class="mdi mdi-clipboard-text-outline me-2"></i> Data Alutsista
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="peminjaman.html">
+                                        <i class="mdi mdi-clipboard-text-outline me-2"></i> Peminjaman
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="pelaporan.html">
+                                        <i class="mdi mdi-clipboard-pulse-outline me-2"></i> Laporan
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="news.html">
+                                        <i class="mdi mdi-newspaper me-2"></i> Informasi
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="tentang.html">
+                                        <i class="mdi mdi-information-outline me-2"></i> Tentang Kami
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+                        <!-- start page title -->
+                        <div class="row mb-3">
+                            <div class="col-12">
+                                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                    <h4 class="mb-sm-0">Data Alutsista</h4>
+
+                                    <!-- <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Horizontal</a></li>
+                                            <li class="breadcrumb-item active">Default</li>
+                                        </ol>
+                                    </div> -->
+
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="card card-body">
+                                    <label>Kata Kunci</label>
+                                    <input type="text" class="form-control" placeholder="Masukan nama alutsista untuk pencarian"/>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end page title -->
+
+                        <div class="mb-3" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px">
+                            <div class="card mb-1">
+                                <img class="card-img-top img-fluid" style="height: 200px;" src="assets/images/items/handgun.jpeg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title ">Pistol</h4>
+                                    <div class="card-subtitle mb-3">
+                                        <div>4 tersedia</div>
+                                        <div><span class="badge badge-soft-success font-size-12">Kondisi Baik</span></div>
+                                    </div>
+                                    <div class="card-text">
+                                        <span class="badge badge-soft-dark font-size-12">Glock 17 [2]</span>
+                                        <span class="badge badge-soft-dark font-size-12">Beretta 92</span>
+                                        <span class="badge badge-soft-dark font-size-12">Ruger GP100 [2]</span>
+                                        <span class="badge badge-soft-dark font-size-12">Glock 34</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="peminjaman-form.html" class="btn btn-dark d-grid">Ajukan Pinjaman</a>
+                                </div>
+                            </div>
+                            <div class="card mb-1">
+                                <img class="card-img-top img-fluid" style="height: 200px;" src="assets/images/items/tank.jpeg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title ">Tank</h4>
+                                    <div class="card-subtitle mb-3">
+                                        <div>4 tersedia</div>
+                                        <div><span class="badge badge-soft-success font-size-12">Kondisi Baik</span></div>
+                                    </div>
+                                    <div class="card-text">
+                                        <span class="badge badge-soft-dark font-size-12">Leopard 2RI [20]</span>
+                                        <span class="badge badge-soft-dark font-size-12">AMX-13 [20]</span>
+                                        <span class="badge badge-soft-dark font-size-12">PT Pindad Harimau [25]</span>
+                                        <span class="badge badge-soft-dark font-size-12">PT Pindad Kaplan MT [25]</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="peminjaman-form.html" class="btn btn-dark d-grid">Ajukan Pinjaman</a>
+                                </div>
+                            </div>
+                            <div class="card mb-1">
+                                <img class="card-img-top img-fluid" style="height: 200px;" src="assets/images/items/vehicle.jpeg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title ">Kendaraan Tempur</h4>
+                                    <div class="card-subtitle mb-3">
+                                        <div>2 tersedia</div>
+                                        <div><span class="badge badge-soft-warning font-size-12">Kondisi Kurang Baik</span></div>
+                                    </div>
+                                    <div class="card-text">
+                                        <span class="badge badge-soft-dark font-size-12">Anoa [2]</span>
+                                        <span class="badge badge-soft-dark font-size-12">Komodo</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="peminjaman-form.html" class="btn btn-dark d-grid">Ajukan Pinjaman</a>
+                                </div>
+                            </div>
+                            <div class="card mb-1">
+                                <img class="card-img-top img-fluid" style="height: 200px;" src="assets/images/items/missile.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">Rudal</h4>
+                                    <div class="card-subtitle mb-3">Tidak tersedia</div>
+                                    <div class="card-text">
+                                        <span class="badge badge-soft-dark font-size-12">Rudal SAM 75</span>
+                                        <span class="badge badge-soft-dark font-size-12">Rudal Starstreak</span>
+                                        <span class="badge badge-soft-dark font-size-12">Rudal Mistral</span>
+                                        <span class="badge badge-soft-dark font-size-12">Rudal Yakhont P 800</span>
+                                        <span class="badge badge-soft-dark font-size-12">Rudal Kh-59ME</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="d-block py-2 text-center">Tidak Tersedia</div>
+                                </div>
+                            </div>
+                            <div class="card mb-1">
+                                <img class="card-img-top img-fluid" style="height: 200px;" src="assets/images/items/ship.jpeg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title ">Kapal Perang</h4>
+                                    <div class="card-subtitle mb-3">
+                                        <div>14 tersedia</div>
+                                        <div><span class="badge badge-soft-success font-size-12">Kondisi Baik</span></div>
+                                    </div>
+                                    <div class="card-text">
+                                        <span class="badge badge-soft-dark font-size-12">KRI Diponegoro-class Frigate [2]</span>
+                                        <span class="badge badge-soft-dark font-size-12">KRI Makassar-class Landing [2]</span>
+                                        <span class="badge badge-soft-dark font-size-12">Platform Dock (LPD) [5]</span>
+                                        <span class="badge badge-soft-dark font-size-12">KRI Martadinata-class Frigate [5]</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="peminjaman-form.html" class="btn btn-dark d-grid">Ajukan Pinjaman</a>
+                                </div>
+                            </div>
+                            <div class="card mb-1">
+                                <img class="card-img-top img-fluid" style="height: 200px;" src="assets/images/items/submarine.jpeg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title ">Kapal Selam</h4>
+                                    <div class="card-subtitle mb-3">
+                                        <div>8 tersedia</div>
+                                        <div><span class="badge badge-soft-success font-size-12">Kondisi Baik</span></div>
+                                    </div>
+                                    <div class="card-text">
+                                        <span class="badge badge-soft-dark font-size-12">Type 209/1300-class Submarine [8]</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="peminjaman-form.html" class="btn btn-dark d-grid">Ajukan Pinjaman</a>
+                                </div>
+                            </div>
+                            <div class="card mb-1">
+                                <img class="card-img-top img-fluid" style="height: 200px;" src="assets/images/items/ship-patrol.jpeg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title ">Kapal Patrol</h4>
+                                    <div class="card-subtitle mb-3">
+                                        <div>17 tersedia</div>
+                                        <div><span class="badge badge-soft-success font-size-12">Kondisi Baik</span></div>
+                                    </div>
+                                    <div class="card-text">
+                                        <span class="badge badge-soft-dark font-size-12">Kapal Patroli Kelas FPB [6]</span>
+                                        <span class="badge badge-soft-dark font-size-12">Kapal Patroli Kelas PC-40 [5]</span>
+                                        <span class="badge badge-soft-dark font-size-12">Kapal Patroli Kelas PC-60 [6]</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="peminjaman-form.html" class="btn btn-dark d-grid">Ajukan Pinjaman</a>
+                                </div>
+                            </div>
+                            <div class="card mb-1">
+                                <img class="card-img-top img-fluid" style="height: 200px;" src="assets/images/items/ship-fighter.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title ">Armada Pemukul</h4>
+                                    <div class="card-subtitle mb-3">
+                                        <div>21 tersedia</div>
+                                        <div><span class="badge badge-soft-success font-size-12">Kondisi Baik</span></div>
+                                    </div>
+                                    <div class="card-text">
+                                        <span class="badge badge-soft-dark font-size-12">KRI Ahmad Yani (351) [5]</span>
+                                        <span class="badge badge-soft-dark font-size-12">KRI Slamet Riyadi (352) [5]</span>
+                                        <span class="badge badge-soft-dark font-size-12">KRI Yos Sudarso (353) [5]</span>
+                                        <span class="badge badge-soft-dark font-size-12">KRI Oswald Siahaan (354) [5]</span>
+                                        <span class="badge badge-soft-dark font-size-12">KRI Abdul Halim Perdanakusuma (355) [1]</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="peminjaman-form.html" class="btn btn-dark d-grid">Ajukan Pinjaman</a>
+                                </div>
+                            </div>
+                            <div class="card mb-1">
+                                <img class="card-img-top img-fluid" style="height: 200px;" src="assets/images/items/fighter-plane.jpeg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title ">Pesawat Tempur</h4>
+                                    <div class="card-subtitle mb-3">
+                                        <div>23 tersedia</div>
+                                        <div><span class="badge badge-soft-success font-size-12">Kondisi Baik</span></div>
+                                    </div>
+                                    <div class="card-text">
+                                        <span class="badge badge-soft-dark font-size-12">Sukhoi Su-27 dan Su-30 [10]</span>
+                                        <span class="badge badge-soft-dark font-size-12">F-16 Fighting Falcon [1]</span>
+                                        <span class="badge badge-soft-dark font-size-12">T-50 Golden Eagle [2]</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="peminjaman-form.html" class="btn btn-dark d-grid">Ajukan Pinjaman</a>
+                                </div>
+                            </div>
+                            <div class="card mb-1">
+                                <img class="card-img-top img-fluid" style="height: 200px;" src="assets/images/items/train-plane.jpeg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title ">Pesawat Latih</h4>
+                                    <div class="card-subtitle mb-3">18 tersedia</div>
+                                    <div class="card-subtitle mb-3">
+                                        <div>18 tersedia</div>
+                                        <div><span class="badge badge-soft-success font-size-12">Kondisi Baik</span></div>
+                                    </div>
+                                    <div class="card-text">
+                                        <span class="badge badge-soft-dark font-size-12">KT-1B Wong Bee [10]</span>
+                                        <span class="badge badge-soft-dark font-size-12">T-6 Texan II [8]</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="peminjaman-form.html" class="btn btn-dark d-grid">Ajukan Pinjaman</a>
+                                </div>
+                            </div>
+                            <div class="card mb-1">
+                                <img class="card-img-top img-fluid" style="height: 200px;" src="assets/images/items/helicopter.jpeg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title ">Helikopter</h4>
+                                    <div class="card-subtitle mb-3">
+                                        <div>9 tersedia</div>
+                                        <div><span class="badge badge-soft-success font-size-12">Kondisi Baik</span></div>
+                                    </div>
+                                    <div class="card-text">
+                                        <span class="badge badge-soft-dark font-size-12">AH-64E Apache Guardian [5]</span>
+                                        <span class="badge badge-soft-dark font-size-12">Bell 412EP [3]</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="peminjaman-form.html" class="btn btn-dark d-grid">Ajukan Pinjaman</a>
+                                </div>
+                            </div>
+                            <div class="card mb-1">
+                                <img class="card-img-top img-fluid" style="height: 200px;" src="assets/images/items/rocket.jpeg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title ">Roket dan Bom</h4>
+                                    <div class="card-subtitle mb-3">
+                                        <div>103 tersedia</div>
+                                        <div><span class="badge badge-soft-success font-size-12">Kondisi Baik</span></div>
+                                    </div>
+                                    <div class="card-text">
+                                        <span class="badge badge-soft-dark font-size-12">FFAR [2]</span>
+                                        <span class="badge badge-soft-dark font-size-12">S8 Kom [1]</span>
+                                        <span class="badge badge-soft-dark font-size-12">Mark 12 [50]</span>
+                                        <span class="badge badge-soft-dark font-size-12">Mark 66 [25]</span>
+                                        <span class="badge badge-soft-dark font-size-12">Mark 82 [25]</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="peminjaman-form.html" class="btn btn-dark d-grid">Ajukan Pinjaman</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+                    </div>
+                    
+                </div>
+                <!-- End Page-content -->
+               
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <script>document.write(new Date().getFullYear())</script> © FBA Group.
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+        <!-- Right bar overlay-->
+        <div class="rightbar-overlay"></div>
+
+        <!-- JAVASCRIPT -->
+        <script src="assets/libs/jquery/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/libs/simplebar/simplebar.min.js"></script>
+
+        <script>
+            $( document ).ready(function() {
+                if (localStorage.getItem('isLogin')) {
+                    const dataUser = JSON.parse(localStorage.getItem('dataUser'))
+                    $('#account-name').html(dataUser.name)
+                } else {
+                    window.location.href="auth-login.html"
+                }
+            });
+
+            function signout() {
+                localStorage.removeItem('dataUser')
+                localStorage.removeItem('isLogin')
+                window.location.href="auth-login.html"
+            }
+        </script>
+    </body>
+</html>
